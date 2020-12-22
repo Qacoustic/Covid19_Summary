@@ -8,7 +8,7 @@ function App() {
 
   const dispatch = useDispatch();
 
-  const getCovidInfo = async () => dispatch(getCovidSummaryAction());
+  const getCovidInfo = () => dispatch(getCovidSummaryAction());
 
   useEffect(() => {
     getCovidInfo();
