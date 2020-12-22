@@ -10,9 +10,11 @@ function App() {
 
   const getCovidInfo = () => dispatch(getCovidSummaryAction());
 
-  useEffect(() => {
-    getCovidInfo();
-  }, [])
+  // useEffect(() => {
+  //   getCovidInfo();
+  // }, [])
+
+  getCovidInfo();
 
   return (
     <>
