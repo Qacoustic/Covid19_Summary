@@ -199,10 +199,9 @@ tr:nth-child(even){
 		text-align: left;
 	}
 }
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) {
+
+
+@media (min-width: 481px) and (max-width: 767px) {
 
   body{
     margin:0;
