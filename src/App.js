@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Header from './components/Header';
 import Table from './components/table/Table.jsx'
 import { getCovidSummaryAction } from './actions/action'
@@ -9,10 +8,6 @@ function App() {
   const dispatch = useDispatch();
 
   const getCovidInfo = () => dispatch(getCovidSummaryAction());
-
-  // useEffect(() => {
-  //   getCovidInfo();
-  // }, [])
 
   getCovidInfo();
 

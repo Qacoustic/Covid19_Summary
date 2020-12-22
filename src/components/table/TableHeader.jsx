@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCovidCountryFilteredAction } from '../../actions/action.js'
 import { ASC, DESC } from '../../constant';
@@ -20,23 +20,22 @@ export default function TableHeader() {
             orderBy = DESC;
         }
 
+        sortColumn({ column, orderBy });
+
         setColumnSorted({ column, orderBy });
+
     }
 
-    const sortColumn = () => {
+    const sortColumn = (objColumnSorted) => {
         if (covidCountryFiltered?.length) {
-            const sortFunction = columnSorted.orderBy === ASC ?
-                (a, b) => (a[columnSorted.column] - b[columnSorted.column]) :
-                (a, b) => (b[columnSorted.column] - a[columnSorted.column])
+            const sortFunction = objColumnSorted.orderBy === ASC ?
+                (a, b) => (a[objColumnSorted.column] - b[objColumnSorted.column]) :
+                (a, b) => (b[objColumnSorted.column] - a[objColumnSorted.column])
 
             const dataSorted = covidCountryFiltered.sort(sortFunction);
             dispatch(setCovidCountryFilteredAction([...dataSorted]));
         }
     }
-
-    useEffect(() => {
-        sortColumn();
-    }, [columnSorted])
 
     return (
         <thead>
