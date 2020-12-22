@@ -15,7 +15,7 @@ export default function Header() {
 
     return (
         <header className="flexheader">
-            <h1 className="flexitem">Covid19 Summary</h1>
+            <h1 className="flexitem">Covid Summary</h1>
             <div className="flexitem">
                 <div className='sectionfilter'>
                     <label className="labelfilter">Country</label>
