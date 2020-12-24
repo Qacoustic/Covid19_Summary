@@ -1,7 +1,7 @@
 # Covid19 Summary
 
-<b>Overview</b>
-This Project is a test for CodeMonday. 
+<b>Overview</b></br>
+This Project is a test for CodeMonday.</br>
 <b>Live Link</b>: https://covid-19summary.netlify.app/
 
 <b>Features</b>
